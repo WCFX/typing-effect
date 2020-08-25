@@ -1,0 +1,53 @@
+:root {
+
+  font-size: 62.5%;
+  --background: rgba(25,25,25);
+  --color-font: rgba(255,255,255,0.75);
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Special Elite", monospace;
+  height: 100vh;
+  background: var(--background);
+}
+.line {
+  border-right: 2px solid rgba(255,255,255,0.75);
+  margin: 0 auto;
+  font-size: 3em;
+  text-align: center;
+  color: var(--color-font);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.typing-animation {
+  animation: blinkCursor 500ms steps(40) infinite normal,
+   typing 4s steps(40) 1s normal both;
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }
+  to{
+    width: 24em;
+  }
+}
+
+@keyframes blinkCursor {
+  from {
+    border-right-color: var(--color-font);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
